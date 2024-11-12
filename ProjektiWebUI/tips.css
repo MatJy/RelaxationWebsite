@@ -1,0 +1,196 @@
+body {
+  background-image: url('ProjektiKuvat/path-forest-among-trees-generative-ai.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% 15% 0% 15%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1%;
+  margin-bottom: 1%;
+  background-color: rgb(67, 175, 81);
+}
+
+.navbar {
+  padding-right: 10%;
+  text-align: right;
+}
+
+.navbar a {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 2%;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar a:after,
+.navbar a:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  display: block;
+  height: 1px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  transition: all 300ms ease-in;
+}
+
+.navbar a:after {
+  bottom: 0;
+  left: 0;
+}
+
+.navbar a:before {
+  top: 0;
+  right: 0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: #fff;
+}
+.navbar a:hover::before {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background-color: #fff;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0.5% 4%;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 30%;
+  margin-top: 5%;
+  margin-left: 70%;
+  margin-bottom: 5%;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  width: 8%;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  margin: 6px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    background: transparent;
+  }
+
+  .card {
+    width: 100%;
+  }
+  .card1 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: #333;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar a {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 913px) {
+  .header {
+    background: transparent;
+  }
+
+  .card {
+    width: 100%;
+  }
+  .card1 {
+    margin-left: 0;
+    width: 100%;
+  }
+  .container {
+    font-size: 1.5em;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: #333;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar a {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

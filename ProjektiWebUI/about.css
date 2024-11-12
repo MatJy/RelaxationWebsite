@@ -1,0 +1,163 @@
+body {
+  background-color: lightgray;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1%;
+  background-color: white;
+}
+
+.navbar {
+  padding-right: 10%;
+  text-align: right;
+}
+
+.navbar a {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 2%;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar a:after,
+.navbar a:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  display: block;
+  height: 1px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  transition: all 300ms ease-in;
+}
+
+.navbar a:after {
+  bottom: 0;
+  left: 0;
+}
+
+.navbar a:before {
+  top: 0;
+  right: 0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: #000000;
+}
+.navbar a:hover::before {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background-color: #000000;
+}
+
+.about-us {
+  height: 100vh;
+  width: 100%;
+  padding: 4% 0;
+  background: #ddd;
+}
+.pic {
+  width: 40%;
+}
+.about {
+  width: 100%;
+  max-width: 85%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 50%;
+}
+.text h3 {
+  font-size: 6vh;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+.text h5 {
+  font-size: 4vh;
+  font-weight: 500;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.text p {
+  font-size: 2.5vh;
+}
+
+.lista a {
+  font-size: 2.5vh;
+  text-decoration: none;
+  color: #000;
+}
+
+.lista a:hover {
+  color: green;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  width: 8%;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin: 6px 0;
+}
+
+.rakenne {
+  width: 80%;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 913px) {
+  .about {
+    display: grid;
+  }
+  .pic {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+  .menu-icon {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: #333;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar a {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
